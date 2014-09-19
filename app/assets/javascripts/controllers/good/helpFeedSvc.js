@@ -1,16 +1,14 @@
 angular.module("helpFeed")
     .factory("helpFeedSvc", function ($rootScope, $log, $http) {
 
-
       var urlHelp = "/users/";
-
 
       var getHelps = function () {
         return $http.get("/allposts");
       };
 
       var getHelp = function (id) {
-        return $http.get(urlHelp + id + "/posts");
+        return $http.get("/allposts" + "/" + id);
       };
 
       var addHelp = function (help,id) {
@@ -20,6 +18,7 @@ angular.module("helpFeed")
         $log.info("help:added");
         });
       };
+
 
       return {
         getHelps: getHelps,

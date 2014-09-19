@@ -3,16 +3,14 @@ angular.module("helpFeed")
       $scope.currentUser = currentUser;
       console.log($scope.currentUser);
 
-
       $scope.allposts = [];
-
 
       helpFeedSvc.getHelps().then(function (helps) {
         console.log(helps)
         $scope.allposts = helps.data;
       });
 
-      helpFeedSvc.getHelp($scope.currentUser.id).then(function (response) {
+      helpFeedSvc.getHelp($scope.allposts.id).then(function (response) {
         $scope.singleHelp = response.data;
       });
 

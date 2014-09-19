@@ -8,6 +8,10 @@ angular.module("helpFeed",
             templateUrl: "../assets/helpFeed.html",
             controller: "helpFeedCtrl"
         })
+        .when("/:id", {
+            templateUrl: "../assets/helpShow.html",
+            controller: "helpFeedCtrl"
+        })
         .otherwise({
            redirectTo: "/"
          });
