@@ -1,7 +1,6 @@
 <!-- Header of the page -->
 <header>
-  <h2>Hello!</h2>
-  <a href="#"><button name="button">LOGOUT</button></a>
+  <h2>Welcome to Good Samaritan</h2>
 </header>
 
 <hr>
@@ -9,13 +8,13 @@
 <!-- Submit form and helpfeed -->
 <div class="container">
   <div class="row">
-    <button ng-click="boom = true" ng-hide="boom">Need Help?</button>
+    <button class="btn btn-success" ng-click="boom = true" ng-hide="boom">Need Help?</button>
     <div>
       <form ng-show="boom" ng-submit="addHelp(newHelp, currentUser.id)">
         <textarea name="Name" rows="8" cols="40" placeholder="What's wrong?" ng-model="newHelp.problem"></textarea>
 
         <input type="text" placeholder="Enter Your Location" ng-model="newHelp.landmark">
-        <button type="submit">Get Help!</button>
+        <button class="btn btn-warning" ng-click="boom = false" type="submit">Get Help!</button>
       </form>
     </div>
   </div>
@@ -25,14 +24,14 @@
       <div>
         <ul>
 
-          <li ng-repeat="help in allposts">
+          <li class="helpRepeat" ng-repeat="help in allposts">
 
             <h4>{{help.user}}</h4>
-            <span>{{help.date}}</span>
+            <span>{{help.date | date : format : timezone}}</span>
             <p>
               {{help.problem}}
             </p>
-            <a href="#/{{help.id}}"><button>Learn More</button></a>
+            <a href="#/{{help.id}}"><button class="btn btn-info">Learn More</button></a>
           </li>
         </ul>
       </div>
