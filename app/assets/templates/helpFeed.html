@@ -22,12 +22,12 @@
     <div>
       <h2>Help, they need somebody!</h2>
       <div>
-        <ul>
+        <ul class="listItems">
 
           <li class="helpRepeat" ng-repeat="help in allposts">
 
             <h4>{{help.user}}</h4>
-            <span>{{help.date | date : format : timezone}}</span>
+            <span class="date">{{help.date | date : format : timezone}}</span>
             <p>
               {{help.problem}}
             </p>
