@@ -13,10 +13,45 @@ h2 {
   ul {
     list-style-type: none;
     padding: 0px;
+    li{
+      .date{
+        color: gray;
+      }
+      p{
+        font-size: 2em;
+      }
+    }
   }
   .helpRepeat {
     background-color: #CED7DA;
     border-radius: 5px;
     padding-bottom: 5px;
   }
+}
+
+//show page styles
+header{
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+}
+.showContainer{
+  background-color: #CED7DA;
+  border-radius: 5px;
+  opacity: 1;
+.showDate{
+  text-align: center;
+  color: white;
+}
+.showProblem{
+  color: white;
+  font-size: 2.5em;
+}
+.showLandmark{
+  color: white;
+  font-size: 1.5em;
+}
+button{
+  margin: 15px;
+}
 }

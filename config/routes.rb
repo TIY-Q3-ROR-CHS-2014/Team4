@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :users, :path => 'accounts'
-  
+
   root 'welcome#index'
   resources :users, defaults: {format: 'json'} do
-    resources :posts do 
+    resources :posts do
     end
   end
 
