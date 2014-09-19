@@ -1,0 +1,22 @@
+// Place all the styles related to the good controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  width: 40%;
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  .helpRepeat {
+    background-color: #CED7DA;
+    border-radius: 5px;
+    padding-bottom: 5px;
+  }
+}
